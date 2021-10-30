@@ -21,23 +21,24 @@
     <main>
       <section class="dish">
         <div class="grey-box">
-          <h1 id="looking-for">What are you looking for?*</h1>
-          <input class="choice" type="radio" id="sideChoice" name="selector" value="side" onclick="handleClick(this)">
+          <h1 id="looking-for">What are you looking for?<span class="asterisk">*</span></h1>
+          <input class="choice" type="radio" id="sideChoice" name="selector" value="side">
           <label for="sideChoice">Side</label><br>
           <input class="choice" type="radio" id="mainChoice"
-          name="selector" value="main" onclick="handleClick(this)">
+          name="selector" value="main">
           <label for="mainChoice">Main</label><br>
           <input class="choice" type="radio" id="dessertChoice"
-          name="selector" value="dessert" onclick="handleClick(this)">
+          name="selector" value="dessert">
           <label for="dessertChoice">Dessert</label><br>
           <input class="choice" type="radio" id="entireMeal"
-          name="selector" value="meal" onclick="handleClick(this)">
+          name="selector" value="meal">
           <label for="entireMeal">Entire Meal</label><br>
           <button class="meal-button">LET'S COOK!</button>
         </div>
       </section>
       <section class="pot">
         <img id='cookpot' src="/Users/kaicoder/turing/mod1/whats-for-dinner/assets/cookpot.svg" alt='cookpot'>
+        <p class="make-this hidden">You should make:</p>
         <button class="clear hidden">CLEAR</button>
       </section>
     </main>
