@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <header>
@@ -22,7 +23,7 @@
       <section class="dish">
         <div class="grey-box">
           <h1 id="looking-for">What are you looking for?<span class="asterisk">*</span></h1>
-          <input class="choice" type="radio" id="sideChoice" name="selector" value="side">
+          <input class="choice" type="radio" id="sideChoice" name="selector" value="side" checked>
           <label for="sideChoice">Side</label><br>
           <input class="choice" type="radio" id="mainChoice"
           name="selector" value="main">
@@ -38,7 +39,8 @@
       </section>
       <section class="pot">
         <img id='cookpot' src="/Users/kaicoder/turing/mod1/whats-for-dinner/assets/cookpot.svg" alt='cookpot'>
-        <p class="make-this hidden">You should make:</p>
+        <p id="make" class="make-this hidden">You should make:</p><br>
+        <p id="meal-here" class='meal-display hidden'></p>
         <button class="clear hidden">CLEAR</button>
       </section>
     </main>
