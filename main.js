@@ -97,7 +97,8 @@ function showMeal() {
   clearButton.classList.remove('hidden');
   makeThis.classList.remove('hidden');
   pot.classList.add('hidden')
-    displayMeal()
+  dishSelection.classList.remove('hidden')
+   displayMeal()
 }
 
 function displayMeal() {
@@ -107,6 +108,8 @@ function displayMeal() {
   dishSelection.innerText = mainSelection[getRandomIndex(mainSelection)]
 } else if (dessert.checked) {
   dishSelection.innerText = dessertSelection[getRandomIndex(dessertSelection)]
+} else if (makeMeal.checked) {
+  dishSelection.innerText = sideSelection[getRandomIndex(sideSelection)] + mainSelection[getRandomIndex(mainSelection)] + dessertSelection[getRandomIndex(dessertSelection)]
 }
 
 
@@ -116,7 +119,7 @@ function goHome() {
   clearButton.classList.add('hidden')
   makeThis.classList.add('hidden')
   pot.classList.remove('hidden')
-
+  dishSelection.classList.add('hidden')
 }
 // radioButtons.addEventListener('checked', getValue);
 //
