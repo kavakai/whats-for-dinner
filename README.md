@@ -1,23 +1,24 @@
 # What's for Dinner?
 
+## Developer
+
+Kai Kuller
+
 ## Overview
 
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
+After these last two years of eating at home, aren't you bored of the same old meals? What's for Dinner is a website that takes the planning out meals. Pick from a list of sides, mains, and desserts to create a meal, or pick the "entire meal" option to see a full three course meal. Once you have made a selection, click the "let's cook" button to see some meal suggestions. So sit back, relax and "LET'S COOK!"
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+## Technologies
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
+Mac BigSur OS. Atom. Chrome.  
 
-## Learning Goals
+## Languages
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+Javascript. CSS. HTML.
 
 ## Setup
 
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
+- Open link in browser https://kavakai.github.io/whats-for-dinner/
+- Choose an option from the "What are you looking for" section.
+- Click the "let's cook" button and watch your item displayed where the pot image was.
+- Click the "clear" button to discard that choice and start again.
