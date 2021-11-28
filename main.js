@@ -98,6 +98,6 @@ letsCook.addEventListener('click', showMeal)
 clearButton.addEventListener('click', goHome) 
 
 
-function getRandomIndex(array) {
+let  getRandomIndex = array => {
   return Math.floor(Math.random() * array.length);
 };
