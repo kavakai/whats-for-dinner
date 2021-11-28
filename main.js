@@ -1,29 +1,16 @@
-var addRecipe = document.querySelector('.add-recipe-button');
-
 var radioButtons = document.getElementsByName('selector');
-console.log(radioButtons)
 
-var side = document.querySelector('#sideChoice');
+const idTitles = ['#sideChoice', '#mainChoice', '#dessertChoice', '#entireMeal', '#cookpot'];
 
-var main = document.querySelector('#mainChoice');
+const[side, main, dessert, makeMeal, pot] = idTitles.map(idName => document.querySelector(idName));
 
-var dessert = document.querySelector('#dessertChoice');
+const classTitles = ['.add-recipe-button', '.meal-button', '.pot', '.clear', '.make-this'];
 
-var makeMeal = document.querySelector('#entireMeal');
+const[addRecipe, letsCook, potImage, clearButton, makeThis] = classTitles.map(className => document.querySelector(className));
 
-var letsCook = document.querySelector('.meal-button');
+let selected = '';
 
-var potImage = document.querySelector('.pot');
-
-var pot = document.querySelector('#cookpot')
-
-var clearButton = document.querySelector('.clear');
-
-var makeThis = document.querySelector('.make-this');
-
-var selected = '';
-
-var sideSelection = [
+const sideSelection = [
 'Miso Glazed Carrots',
 'Coleslaw',
 'Garden Salad',
@@ -36,7 +23,7 @@ var sideSelection = [
 'Hush Puppies',
 ];
 
-var mainSelection = [
+const mainSelection = [
 'Spaghetti and Meatballs',
 'Pineapple Chicken',
 'Shakshuka',
@@ -52,7 +39,7 @@ var mainSelection = [
 'Margarita Pizza',
 ];
 
-var dessertSelection = [
+const dessertSelection = [
 'Apple Pie',
 'Lemon Meringue Pie',
 'Black Forest Cake',
@@ -73,21 +60,13 @@ var dessertSelection = [
 'Eclairs',
 ];
 
-// target radio buttons to capture input
-// create eventListener-click to capture input values
-// get random item from selected array
-// hide cookpot image
-// display choice in cookpots place
-// show clear button
-
-
 clearButton.addEventListener('click', goHome)
 
 letsCook.addEventListener('click', showMeal)
 
 
 
-function showMeal() {
+const showMeal = () => {
   clearButton.classList.remove('hidden');
   makeThis.classList.remove('hidden');
   pot.classList.add('hidden')
@@ -98,33 +77,12 @@ function showMeal() {
   }
 }
 
-function goHome() {
+const goHome = () => {
   clearButton.classList.add('hidden')
   makeThis.classList.add('hidden')
   pot.classList.remove('hidden')
 }
-// radioButtons.addEventListener('checked', getValue);
-//
-// function getValue(event) {
-//   selectedType = '';
-//   for (var i = 0; i < radioButtons.length; i++)
-//   if (radioButtons[i].target.event) {
-//      selectedType = radioButtons[i].value
-//   }
-//   event.preventDefault()
-// }
-//
-// letsCook.addEventListener('click', displayCoice)
-//
-//
-// function displayCoice(selectedType) {
-//   if (selectedType === side) {
-//     potImage.innerHTML = sideSelection[RandomIndex(sideSelection)]
-//   }
-// }
 
-
-
-function getRandomIndex(array) {
+const getRandomIndex = array => {
   return Math.floor(Math.random() * array.length);
 };
