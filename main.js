@@ -1,3 +1,4 @@
+
 var radioButtons = document.getElementsByName('selector');
 
 const idTitles = ['#sideChoice', '#mainChoice', '#dessertChoice', '#entireMeal', '#cookpot'];
@@ -69,20 +70,31 @@ letsCook.addEventListener('click', showMeal)
 const showMeal = () => {
   clearButton.classList.remove('hidden');
   makeThis.classList.remove('hidden');
-  pot.classList.add('hidden')
-  for (var i = 0; i < radioButtons.length; i++)
+  pot.classList.add('hidden');
+  dishSelection.classList.remove('hidden');
+    displayMeal();
+};
 
-  if (radioButtons.value === side) {
-    potImage.innerHTML = (`<p"You should make: ${sideSelection[getRandomIndex(sidsideSelection)]}!"</p>`);
+function displayMeal() {
+  if (side.checked) {
+    dishSelection.innerText = sideSelection[getRandomIndex(sideSelection)] + "!";
+  } else if (main.checked) {
+    dishSelection.innerText = mainSelection[getRandomIndex(mainSelection)] + "!";
+  } else if (dessert.checked) {
+    dishSelection.innerText = dessertSelection[getRandomIndex(dessertSelection)] + "!";
+  } else if (makeMeal.checked) {
+    dishSelection.innerText = mainSelection[getRandomIndex(mainSelection)] + " with a side of " + sideSelection[getRandomIndex(sideSelection)] + " and " + dessertSelection[getRandomIndex(dessertSelection)] + " for dessert!";
   }
-}
+};
 
 const goHome = () => {
   clearButton.classList.add('hidden')
   makeThis.classList.add('hidden')
   pot.classList.remove('hidden')
+  dishSelection.classList.add('hidden');
 }
 
-const getRandomIndex = array => {
+
+function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
